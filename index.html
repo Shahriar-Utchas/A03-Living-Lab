@@ -1,11 +1,123 @@
 <!DOCTYPE html>
-<html>
+<html data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <title>Living Lab</title>
+    <link rel="shortcut icon" href="./images/healthy.png" type="image/x-icon" />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- DaisyUI CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.9.4/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Sora Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Sora:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              "btn-grn": "#179800",
+            },
+          },
+        },
+      };
+    </script>
   </head>
   <body>
-    <h1 class="text-3xl font-bold">Hello world!</h1>
+    <header>
+      <nav>
+        <div
+          class="navbar grid grid-cols-2 lg:grid-cols-3 items-center lg:px-28"
+        >
+          <!-- Left Section for Logo -->
+          <div class="nav-logo flex justify-start">
+            <img class="w-28" src="images/logo-header.png" alt="logo" />
+          </div>
+
+          <!-- Center Section for Links (hidden on small screens) -->
+          <div class="nav-items hidden lg:flex justify-center">
+            <ul class="menu menu-horizontal px-1 space-x-6">
+              <li><a>Product</a></li>
+              <li><a>Service</a></li>
+              <li><a>Contact Us</a></li>
+            </ul>
+          </div>
+
+          <!-- Right Section for Buttons (hidden on small screens) -->
+          <div class="nav-btns hidden lg:flex justify-end items-center gap-3">
+            <i class="fa-solid fa-cart-shopping lg:flex"></i>
+            <i class="fa-solid fa-magnifying-glass lg:flex"></i>
+            <button
+              class="h-8 border border-btn-grn text-btn-grn px-4 rounded-md hover:bg-btn-grn hover:text-white transition"
+            >
+              Login
+            </button>
+            <button
+              class="h-8 bg-btn-grn text-white px-4 rounded-md hover:bg-green-700 transition"
+            >
+              Register
+            </button>
+          </div>
+
+          <!-- Dropdown for Mobile View -->
+          <div class="dropdown flex justify-end lg:hidden items-center">
+            <label tabindex="0" class="btn btn-ghost">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </label>
+            <ul
+              tabindex="0"
+              class="dropdown-content menu menu-compact mt-3 p-2 shadow bg-base-100 rounded-box w-52 absolute top-full right-0"
+            >
+              <li><a>Product</a></li>
+              <li><a>Service</a></li>
+              <li><a>Contact Us</a></li>
+              <button
+                class="h-8 border border-btn-grn text-btn-grn px-4 rounded-md hover:bg-btn-grn hover:text-white transition m-2"
+              >
+                Login
+              </button>
+              <button
+                class="h-8 bg-btn-grn text-white px-4 rounded-md hover:bg-green-700 transition m-2"
+              >
+                Register
+              </button>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <hr class="border-1 border-btn-grn lg:hidden" />
+    <main></main>
+    <footer></footer>
   </body>
 </html>
